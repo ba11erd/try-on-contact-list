@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en"></html>
+
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie-edge">
+    
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/css/materialize.css">
+    
+    <title>My 
+    Contacts</title>
+
+
+
+</head>
+<body>
+    <div class="container">
+    <h1 class="center-align">
+        My Contacs
+        </h1>
+        <input type="text" id="filterinput" placeholder="Search names...">
+        
+        <ul id="names" class="collection with-header">
+        <li class="collection-header">
+            <h5>A</h5>
+            </li>
+            <li class="collection-item">
+            <a href="#">Abe</a>
+            </li>
+             <li class="collection-item">
+            <a href="#">Arkensaw</a>
+            </li> 
+            <li class="collection-item">
+            <a href="#">Arnold</a>
+            </li>
+             <li class="collection-item">
+            <a href="#">Andrew</a>
+            </li>
+             <li class="collection-item">
+            <a href="#">Alisha</a>
+            </li>
+            <li class="collection-item">
+            <a href="#">Alex</a>
+            </li>
+            <li class="collection-item">
+            <a href="#">Alexandra</a>
+            </li>
+            
+            <h5>B</h5>
+             <li class="collection-item">
+            <a href="#">Balmound</a>
+            </li>
+             <li class="collection-item">
+            <a href="#">Bethany</a>
+            </li>
+             <li class="collection-item">
+            <a href="#">Braden</a>
+            </li>
+             <li class="collection-item">
+            <a href="#">Baleck</a>
+            </li>
+             <li class="collection-item">
+            <a href="#">Bleshm</a>
+            </li>
+            <h5>C</h5>
+             <li class="collection-item">
+            <a href="#">Caleb</a>
+            </li>
+             <li class="collection-item">
+            <a href="#">Cathy</a>
+            </li>
+             <li class="collection-item">
+            <a href="#">Corinth</a>
+            </li>
+              <li class="collection-item">
+            <a href="#">Cornielius</a>
+            </li>
+              <li class="collection-item">
+            <a href="#">Calvin</a>
+            </li>
+              <li class="collection-item">
+            <a href="#">Creanton</a>
+            </li>
+            <h5>D</h5>
+            <li class="collection-item">
+            <a href="#">Drake</a>
+            </li>
+             <li class="collection-item">
+            <a href="#">Damarius</a>
+            </li>
+             <li class="collection-item">
+            <a href="#">Damound</a>
+            </li>
+             <li class="collection-item">
+            <a href="#">Draven</a>
+            </li>
+             <li class="collection-item">
+            <a href="#">Daniella</a>
+            </li>
+             <li class="collection-item">
+            <a href="#">Danil</a>
+            </li>
+             <li class="collection-item">
+            <a href="#">Dyllan</a>
+            </li>
+             <li class="collection-item">
+            <a href="#">Dillan</a>
+            </li>
+    
+        
+        </ul>
+    
+    </div>
+    <script>
+    let filterInput = document.getElementById('filterInput');
+    filterInput.addEventListener('keyup',filterNames);
+    
+    function filterNames(){
+        let filterValue = document.getElementById('filterInput').value.toUpperCase;
+        
+        let ul = document.getElementById('names');
+        
+        let li = ul.querySelectorAll('li.collection-item');
+        
+        for(let i = 0;i < li.length;i++){
+            let a =li[i].getElementsByTagName('a')[0];
+            
+            if(a.innerHTML.toUpperCase().indexOf(filterValue) > -1){
+                li[i].style.display = '';
+            }
+            else{
+                li[i].style.display = 'none';
+            }
+        }
+        
+        
+    }
+    </script>
+
+
+
+
+
+
+
+</body>
