@@ -2,11 +2,11 @@
 <head>
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <link rel="stylesheet" type="text/css" href="Color%20Changer.css"/>
+    <link rel="stylesheet" type="text/css" href="ColorChanger.css"/>
     <title>MY Color Changer</title>
 </head>
 <body>
-  <button id="change" class="bnt">Change Color</button>
+ <button id="change" class="btn">Change Color</button>
     <div class="mdls">
         <div class="modal" id="modal">
         <div class="main">
@@ -64,6 +64,11 @@
                     <div id="preview"></div>
                 </div>
                 <div class="filler"></div>
+                 <div>
+            <button onclick="Close()" class="btn2">Close</button>
+            <button onclick="changeColor()" class="btn2">Change</button>
+          </div>
+          <div class="filler"></div>
             </div>
             </div>
         </div>
@@ -71,7 +76,7 @@
 </body>
 
 
-
+<script src="ColorChanger.js"></script>
 
 
 </html>
